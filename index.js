@@ -22,7 +22,6 @@ txtFile.onreadystatechange = function () {
 			pos.style.flexGrow = parseInt(
 				(parseInt(lines[0]) * 100) / sum
 			).toString();
-			console.log(lines[0]);
 
 			const neu = document.getElementById("neutral");
 			neu.innerHTML =
@@ -30,7 +29,6 @@ txtFile.onreadystatechange = function () {
 			neu.style.flexGrow = parseInt(
 				(parseInt(lines[1]) * 100) / sum
 			).toString();
-			console.log(lines[1]);
 
 			const neg = document.getElementById("negative");
 			neg.innerHTML =
@@ -38,8 +36,6 @@ txtFile.onreadystatechange = function () {
 			neg.style.flexGrow = parseInt(
 				(parseInt(lines[2]) * 100) / sum
 			).toString();
-
-			console.log(lines[2]);
 		}
 	}
 };
