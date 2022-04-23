@@ -1,0 +1,89 @@
+@font-face {
+	font-family: "Soria";
+	src: url("Soria-Bold.otf") format("opentype");
+}
+
+:root {
+	--container-height: 3em;
+}
+
+main {
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+
+h1 {
+	font-family: "Soria", Arial, Helvetica, sans-serif;
+	font-size: clamp(5em, 12vw, 15em);
+	text-shadow: clamp(0.2rem, 0.08em, 18rem) clamp(0.2rem, 0.08em, 18rem)
+		rgb(0, 0, 0);
+	text-align: center;
+	margin: 0.2em 0 0;
+	padding: 0;
+	border-bottom: none;
+}
+
+h1:hover {
+	font-size: 12.5vw;
+}
+
+span#big-O {
+	font-size: 1.3em;
+}
+
+a[title~="Repository"] {
+	border: none;
+}
+
+a[title~="Repository"]:hover::after {
+	opacity: 0;
+}
+
+a[title~="Repository"]::after {
+	content: "";
+	display: inline-block;
+	background-color: #d7f3f7;
+	width: 85vw;
+	height: 5px;
+	border: none;
+	position: relative;
+	left: 7.5vw;
+	margin: 1em 0 5em;
+}
+
+#container {
+	width: 82%;
+	height: var(--container-height);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row-reverse;
+	border: solid 2px #1664a2;
+	border-radius: 25px;
+}
+
+#container > div {
+	margin: 2px;
+	text-align: center;
+	/* vertical aignment */
+	line-height: calc(var(--container-height) - 50%);
+	color: black;
+}
+#container > div:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+#positive {
+	background-color: #37ff14d0;
+	flex-grow: 1;
+	border-radius: 0 20px 20px 0;
+}
+#neutral {
+	background-color: #fff01fd0;
+	flex-grow: 1;
+}
+#negative {
+	background-color: #f72019d0;
+	flex-grow: 1;
+	border-radius: 20px 0 0 20px;
+}

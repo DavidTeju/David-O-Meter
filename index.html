@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>David-O-Meter</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="David Tejuosho is a Computer science and engineering student who's passionate for taking initiative and using technology to solve novel problems"
+		/>
+		<meta name="keywords" content="David Tejuosho, CS Student, Tejuosho" />
+		<meta name="author" content="David Tejuosho" />
 
-</body>
+		<link rel="stylesheet" href="https://davidteju.dev/styling/normalize.css" />
+		<link
+			rel="stylesheet"
+			href="https://davidteju.dev/styling/style-main.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://davidteju.dev/styling/colorful.css"
+			id="page-color"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="https://davidteju.dev/icons/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="https://davidteju.dev/icons/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="https://davidteju.dev/icons/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="https://davidteju.dev/icons/site.webmanifest" />
+		<title>About me</title>
+	</head>
+	<body>
+		<header id="header">
+			<nav>
+				<div class="nav">
+					<a
+						href="https://davidteju.dev/index.html"
+						title="Home"
+						class="faux-h1"
+						>David Tejuosho</a
+					>
+					<p><em>Student of Computer Science</em></p>
+				</div>
+				<ul>
+					<li>
+						<a href="https://davidteju.dev/subpages/about-me.html">Who am I?</a>
+					</li>
+					<li>
+						<a href="https://davidteju.dev/subpages/resume.html">My Resume</a>
+					</li>
+					<li>
+						<a href="https://davidteju.dev/subpages/stuff-I-like.html"
+							>Stuff I like</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main">
+			<a
+				href="https://github.com/DavidTeju/David-O-Meter"
+				title="GitHub Repository"
+			>
+				<h1>David -&nbsp;<span id="big-O">O</span>&nbsp;- Meter</h1>
+			</a>
+
+			<div id="container">
+				<div id="positive" title="Postive Sentiment/Opinions">33%</div>
+				<div id="neutral" title="Neutral Sentiment/Opinions">33%</div>
+				<div id="negative" title="Negative Sentiment/Opinions">33%</div>
+			</div>
+		</main>
+
+		<!-- Switch for color or no color -->
+		<label class="color-switch">
+			<input
+				type="checkbox"
+				id="color-switch"
+				onclick="swapThemeStyleSheet()"
+				checked
+			/>
+			<span class="slider round"></span>
+		</label>
+		<script src="https://davidteju.dev/themeSwapper.js"></script>
+		<script src="index.js"></script>
+	</body>
 </html>
