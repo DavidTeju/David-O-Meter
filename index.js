@@ -1,7 +1,7 @@
 var txtFile = new XMLHttpRequest();
 txtFile.open(
 	"GET",
-	"https://davidteju.dev/David-O-Meter/sentimentValues.txt",
+	"https://davidteju.dev/David-O-Meter/sentimentValues.json",
 	true
 );
 txtFile.onreadystatechange = function () {
