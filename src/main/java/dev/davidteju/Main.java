@@ -1,13 +1,14 @@
 package dev.davidteju;
 
+import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
 
@@ -17,13 +18,19 @@ public class Main {
 		final long MILLIS_IN_15_MIN = 900000;
 		final long WAIT_TIME = MILLIS_IN_15_MIN / MAX_PER_15_MIN;
 		
-		File toPrintTo = new File("sentimentValues.txt");
+		File toPrintTo = new File("sentimentValues.json");
 		if (toPrintTo.isFile()) {
-			try (var scan = new Scanner(toPrintTo)) {
-				AzureAnalyticsValues.positive = scan.nextInt();
-				AzureAnalyticsValues.negative = scan.nextInt();
-				AzureAnalyticsValues.neutral = scan.nextInt();
-			} catch (FileNotFoundException e) {
+			
+			try {
+				String input = FileUtils.readFileToString(toPrintTo);
+				var parsedInput = (JSONObject) new JSONParser().parse(input);
+				AzureAnalyticsValues.positive = (int) parsedInput.get("positive");
+				AzureAnalyticsValues.neutral = (int) parsedInput.get("neutral");
+				AzureAnalyticsValues.negative = (int) parsedInput.get("negative");
+			} catch (FileNotFoundException | ParseException e) {
+				e.printStackTrace();
+				return;
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else AzureAnalyticsValues.printToFile();

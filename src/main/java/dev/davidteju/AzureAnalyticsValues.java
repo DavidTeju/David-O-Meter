@@ -15,20 +15,27 @@ public class AzureAnalyticsValues {
 	}
 	
 	static String valuesToString() {
-		return String.format("Positive: %d%nNegative: %d%nNeutral: %d%n", positive, negative, neutral);
+		return String.format("Positive: %d%nNegative: %d%nNeutral: %d%n", positive, neutral, negative);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static void printToFile() {
-		try (PrintWriter writer = new PrintWriter("sentimentValues.txt")) {
-			writer.printf("%d%n%d%n%d", positive, negative, neutral);
+		try (PrintWriter writer = new PrintWriter("sentimentValues.json")) {
+			JSONObject output = new JSONObject();
+			output.put("time", System.currentTimeMillis());
+			output.put("positive", positive);
+			output.put("neutral", neutral);
+			output.put("negative", negative);
+			
+			writer.print(output);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public static void modifyValues(JSONObject confidenceScores) {
-		AzureAnalyticsValues.negative += Math.round((double) confidenceScores.get("negative"));
 		AzureAnalyticsValues.positive += Math.round((double) confidenceScores.get("positive"));
 		AzureAnalyticsValues.neutral += Math.round((double) confidenceScores.get("neutral"));
+		AzureAnalyticsValues.negative += Math.round((double) confidenceScores.get("negative"));
 	}
 }
