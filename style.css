@@ -13,6 +13,13 @@ main {
 	left: 0;
 }
 
+.nav {
+	display: block;
+}
+.nav p {
+	margin-top: 1em;
+}
+
 h1 {
 	font-family: "Soria", Arial, Helvetica, sans-serif;
 	font-size: clamp(5em, 12vw, 15em);
@@ -25,7 +32,9 @@ h1 {
 }
 
 h1:hover {
-	font-size: 12.5vw;
+	/* font-size: 12.5vw; */
+	filter: brightness(0.9) saturate(3);
+	/* filter: hue-rotate(180deg); */
 }
 
 span#big-O {
@@ -49,7 +58,27 @@ a[title~="Repository"]::after {
 	border: none;
 	position: relative;
 	left: 7.5vw;
-	margin: 1em 0 5em;
+	margin: 1em 0 4em;
+}
+
+#contain-checkbox-container {
+	width: 50%;
+	margin: 1em auto;
+}
+#contain-checkbox {
+	width: fit-content;
+	margin: 1em auto;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.3rem;
+	border-radius: 2px;
+	filter: saturate(3);
+	font-weight: 500;
+}
+#contain-checkbox label {
+	position: relative;
+	top: -0.2em;
 }
 
 #container {
@@ -59,31 +88,66 @@ a[title~="Repository"]::after {
 	display: flex;
 	flex-direction: row-reverse;
 	border: solid 2px #1664a2;
+	margin-bottom: 4em;
 	border-radius: 25px;
 }
 
 #container > div {
 	margin: 2px;
 	text-align: center;
-	/* vertical aignment */
+	position: relative;
+	/* vertical alignment */
 	line-height: calc(var(--container-height) - 50%);
 	color: black;
 }
 #container > div:hover {
 	font-weight: bold;
 	cursor: pointer;
+	filter: saturate(2);
 }
+#container > div::after {
+	color: white;
+	position: absolute;
+	top: calc((var(--container-height) - 50%) * 2);
+	line-height: 1.6;
+}
+
 #positive {
 	background-color: #37ff14d0;
 	flex-grow: 1;
 	border-radius: 0 20px 20px 0;
 }
+#positive::after {
+	content: "Positive Tweets";
+}
+
 #neutral {
 	background-color: #fff01fd0;
 	flex-grow: 1;
+	/* display: none; */
 }
+#neutral::after {
+	content: "Neutral Tweets";
+}
+
 #negative {
 	background-color: #f72019d0;
 	flex-grow: 1;
 	border-radius: 20px 0 0 20px;
+}
+#negative::after {
+	content: "Negative Tweets";
+}
+
+#footnote {
+	position: fixed;
+	bottom: 0.3em;
+	right: 1em;
+	min-width: 30%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+}
+#footnote > span {
+	margin: 0 1.5em;
 }

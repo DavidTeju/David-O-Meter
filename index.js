@@ -6,38 +6,93 @@ txtFile.open(
 );
 txtFile.onreadystatechange = function () {
 	let lines;
-	//TODO add checkbox to allow user choose whether to include neutral or not
-	//TODO modify to show time last updated
+	let beforeContent;
 	if (txtFile.readyState === 4) {
 		// Makes sure the document is ready to parse.
 		if (txtFile.status === 200) {
 			// Makes sure it's found the file.
-			lines = txtFile.responseText.split("\n"); // Will separate each line into an array
+			let result = JSON.parse(txtFile.responseText);
+			console.log(result);
+			const resultArray = [result.positive, result.neutral, result.negative];
+
 			let sum = 0;
-			for (let i = 0; i < lines.length; i++) sum += parseInt(lines[i]);
+			for (let i = 0; i < resultArray.length; i++)
+				sum += parseInt(resultArray[i]);
 
-			const pos = document.getElementById("positive");
-			pos.innerHTML =
-				parseInt((parseInt(lines[0]) * 100) / sum).toString() + "%";
-			pos.style.flexGrow = parseInt(
-				(parseInt(lines[0]) * 100) / sum
-			).toString();
+			const bars = [
+				document.getElementById("positive"),
+				document.getElementById("neutral"),
+				document.getElementById("negative"),
+			];
 
-			const neu = document.getElementById("neutral");
-			neu.innerHTML =
-				parseInt((parseInt(lines[1]) * 100) / sum).toString() + "%";
-			neu.style.flexGrow = parseInt(
-				(parseInt(lines[1]) * 100) / sum
-			).toString();
+			for (let i = 0; i < bars.length; i++) {
+				const bar = bars[i];
+				bar.innerHTML =
+					Math.round((parseInt(resultArray[i]) * 100) / sum).toString() + "%";
 
-			const neg = document.getElementById("negative");
-			neg.innerHTML =
-				parseInt((parseInt(lines[2]) * 100) / sum).toString() + "%";
-			neg.style.flexGrow = parseInt(
-				(parseInt(lines[2]) * 100) / sum
-			).toString();
+				bar.style.flexGrow = Math.round(
+					(parseInt(resultArray[i]) * 100) / sum
+				).toString();
+
+				document.createElement("style");
+
+				beforeContent = window.getComputedStyle(bar, "::after").content;
+
+				const marginLeft =
+					"#" +
+					bar.id +
+					":after{margin-left: -" +
+					beforeContent.length / 4 +
+					"em}";
+
+				const styleTag = document.createElement("style");
+				styleTag.innerHTML = marginLeft;
+				document.head.insertAdjacentElement("beforeend", styleTag);
+			}
+			populateFootnote(sum, result.time);
 		}
 	}
 };
 
+function populateFootnote(sum, epochTime) {
+	document.getElementById("number-of-tweets").innerHTML = document
+		.getElementById("number-of-tweets")
+		.innerHTML.replace(
+			"$num",
+			"<strong>" + sum.toLocaleString("en-US") + "</strong>"
+		);
+
+	var d = new Date(epochTime);
+
+	document.getElementById("time-updated").innerHTML =
+		document.getElementById("time-updated").innerHTML +
+		"<strong>" +
+		d.toLocaleTimeString("en-us", { hour: "2-digit", minute: "2-digit" }) +
+		" " +
+		d.toLocaleDateString("en-us");
+	("</strong>");
+}
+
 txtFile.send(null);
+
+function hideOrShowNeutralBar() {
+	let isChecked = document.getElementById("show-neutral").checked;
+	let neutralBarDisplay = document.getElementById("neutral");
+
+	let pos = document.getElementById("positive");
+	let posPercent = parseInt(pos.style.flexGrow);
+	let neg = document.getElementById("negative");
+	let negPercent = parseInt(neg.style.flexGrow);
+
+	let sum = posPercent + negPercent;
+
+	if (!isChecked) {
+		neutralBarDisplay.style.display = "none";
+		pos.innerHTML = Math.round((posPercent / sum) * 100) + "%";
+		neg.innerHTML = Math.round((negPercent / sum) * 100) + "%";
+	} else {
+		neutralBarDisplay.style.display = "initial";
+		pos.innerHTML = posPercent + "%";
+		neg.innerHTML = negPercent + "%";
+	}
+}

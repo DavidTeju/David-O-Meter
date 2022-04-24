@@ -11,6 +11,13 @@
 		<meta name="keywords" content="David Tejuosho, CS Student, Tejuosho" />
 		<meta name="author" content="David Tejuosho" />
 
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+
 		<link rel="stylesheet" href="https://davidteju.dev/styling/normalize.css" />
 		<link
 			rel="stylesheet"
@@ -76,11 +83,30 @@
 			>
 				<h1>David -&nbsp;<span id="big-O">O</span>&nbsp;- Meter</h1>
 			</a>
+			<div id="contain-checkbox-container">
+				<div class="form-check form-switch" id="contain-checkbox">
+					<label class="form-check-label" for="show-neutral"
+						>Show&nbsp;Neutral?</label
+					>
+					<input
+						class="form-check-input"
+						type="checkbox"
+						id="show-neutral"
+						onclick="hideOrShowNeutralBar()"
+						checked
+					/>
+				</div>
+			</div>
 
 			<div id="container">
-				<div id="positive" title="Postive Sentiment/Opinions">33%</div>
-				<div id="neutral" title="Neutral Sentiment/Opinions">33%</div>
-				<div id="negative" title="Negative Sentiment/Opinions">33%</div>
+				<div id="positive" title="Positive Sentiment/Opinions">NaN</div>
+				<div id="neutral" title="Neutral Sentiment/Opinions">NaN</div>
+				<div id="negative" title="Negative Sentiment/Opinions">NaN</div>
+			</div>
+
+			<div id="footnote">
+				<span id="number-of-tweets">$num tweets analyzed</span>
+				<span id="time-updated">Last updated: </span>
 			</div>
 		</main>
 
