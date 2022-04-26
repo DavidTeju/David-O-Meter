@@ -84,11 +84,10 @@ a[title~="Repository"]::after {
 #container {
 	width: 82%;
 	height: var(--container-height);
-	margin: 0 auto;
 	display: flex;
 	flex-direction: row-reverse;
 	border: solid 2px #1664a2;
-	margin-bottom: 4em;
+	margin: 0 auto 4em;
 	border-radius: 25px;
 }
 

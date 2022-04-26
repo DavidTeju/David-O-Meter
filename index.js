@@ -1,11 +1,10 @@
-var txtFile = new XMLHttpRequest();
+const txtFile = new XMLHttpRequest();
 txtFile.open(
 	"GET",
 	"https://davidteju.dev/David-O-Meter/sentimentValues.json",
 	true
 );
 txtFile.onreadystatechange = function () {
-	let lines;
 	let beforeContent;
 	if (txtFile.readyState === 4) {
 		// Makes sure the document is ready to parse.
@@ -61,17 +60,17 @@ function populateFootnote(sum, epochTime) {
 		.getElementById("number-of-tweets")
 		.innerHTML.replace(
 			"$num",
-			"<strong>" + sum.toLocaleString("en-US") + "</strong>"
+			"<strong>" + sum.toLocaleString() + "</strong>"
 		);
 
-	var d = new Date(epochTime);
+	const d = new Date(epochTime);
 
 	document.getElementById("time-updated").innerHTML =
 		document.getElementById("time-updated").innerHTML +
 		"<strong>" +
 		d.toLocaleTimeString("en-us", { hour: "2-digit", minute: "2-digit" }) +
 		" " +
-		d.toLocaleDateString("en-us");
+		d.toLocaleDateString("en-us")+
 	("</strong>");
 }
 
