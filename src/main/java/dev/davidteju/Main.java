@@ -86,14 +86,14 @@ public class Main {
 	public static void runBatch() {
 		try {
 			JSONArray parsedResponses = TwitterRecentSearch.runTwitterRequest();
+			
+			if (isNull(parsedResponses, "Twitter"))
+				return;
+			
 			JSONArray resultArray = AzureSentimentAnalysis.runSentimentAnalysis(parsedResponses);
 			
-			if (resultArray == null) {
-				AzureAnalyticsValues.printToFile();
-				System.out.println("Azure unresponsive. Will continue in 60 seconds");
-				sleep(1000 * 60);
+			if (isNull(resultArray, "Azure"))
 				return;
-			}
 			
 			for (Object resultObject : resultArray) {
 				JSONObject result = (JSONObject) resultObject;
@@ -102,6 +102,15 @@ public class Main {
 		} catch (ParseException | IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+	}
+	
+	private static boolean isNull(Object toVerify, String nameOfService) throws InterruptedException {
+		if (toVerify == null) {
+			AzureAnalyticsValues.printToFile();
+			System.out.println(nameOfService + " unresponsive. Will continue in 60 seconds");
+			sleep(1000 * 60);
+			return true;
+		}
+		return false;
 	}
 }
