@@ -18,5 +18,5 @@
 Short answer: **No**  
 Long answer: While the project and site are functional, here's some features and stuff I wish to add soon:
 - Ability to see sentiment values for the last hour and last 24 hours
-- Ability to see the latest positive, neutral and negative tweets analyzed
+- Ability to see the recently analysed positive, neutral and negative tweets  
 - Ability to download program software as jar and deploy it to analyze and display sentiment for whatever key word/phrase you choose
