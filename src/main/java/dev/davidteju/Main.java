@@ -6,9 +6,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Path;
+import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
 
@@ -20,13 +20,12 @@ public class Main {
 		
 		File toPrintTo = new File("sentimentValues.json");
 		if (toPrintTo.isFile()) {
-			
 			try {
 				String input = FileUtils.readFileToString(toPrintTo);
 				var parsedInput = (JSONObject) new JSONParser().parse(input);
-				AzureAnalyticsValues.positive = (int) parsedInput.get("positive");
-				AzureAnalyticsValues.neutral = (int) parsedInput.get("neutral");
-				AzureAnalyticsValues.negative = (int) parsedInput.get("negative");
+				AzureAnalyticsValues.positive = (long) parsedInput.get("positive");
+				AzureAnalyticsValues.neutral = (long) parsedInput.get("neutral");
+				AzureAnalyticsValues.negative = (long) parsedInput.get("negative");
 			} catch (FileNotFoundException | ParseException e) {
 				e.printStackTrace();
 				return;
@@ -44,9 +43,44 @@ public class Main {
 				//noinspection BusyWait
 				sleep(WAIT_TIME);
 			}
+			updateRemoteValues();
 			AzureAnalyticsValues.printValues();
 			AzureAnalyticsValues.printToFile();
 		}
+	}
+	
+	static void updateRemoteValues() {
+		try {
+			var update = new ProcessBuilder(Path.of("update.zsh").toAbsolutePath().toString());
+			var logStream = update.start().getInputStream();
+			var errors = update.start().getErrorStream();
+			
+			logGit(new SequenceInputStream(logStream, errors));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void logGit(InputStream stream) throws IOException {
+		Scanner scan = new Scanner(stream).useDelimiter("\n");
+		File f1 = new File("gitUpdates.log");
+		if (!f1.exists())
+			//noinspection ResultOfMethodCallIgnored
+			f1.createNewFile();
+		BufferedWriter bw = new BufferedWriter(new FileWriter(f1.getName(), true));
+		var currentTime = new java.util.Date(System.currentTimeMillis());
+		bw.write(currentTime + "\n");
+		
+		scan.forEachRemaining((line) -> {
+			try {
+				bw.write(line + "\n");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		});
+		
+		bw.close();
+		scan.close();
 	}
 	
 	public static void runBatch() {

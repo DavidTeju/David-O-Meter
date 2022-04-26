@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class AzureAnalyticsValues {
-	static public int positive = 0;
-	static public int negative = 0;
-	static public int neutral = 0;
+	static public long positive = 0;
+	static public long negative = 0;
+	static public long neutral = 0;
 	
 	static void printValues() {
 		System.out.println(valuesToString());

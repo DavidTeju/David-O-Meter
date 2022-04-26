@@ -3,4 +3,3 @@ cd /Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/Davi
 git add "sentimentValues.json"
 git commit -m "update values"
 git push
-exit
