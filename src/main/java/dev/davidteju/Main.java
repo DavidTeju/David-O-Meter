@@ -7,6 +7,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class Main {
 		File toPrintTo = new File("sentimentValues.json");
 		if (toPrintTo.isFile()) {
 			try {
-				String input = FileUtils.readFileToString(toPrintTo);
+				String input = FileUtils.readFileToString(toPrintTo, (Charset) null);
 				var parsedInput = (JSONObject) new JSONParser().parse(input);
 				AzureAnalyticsValues.positive = (long) parsedInput.get("positive");
 				AzureAnalyticsValues.neutral = (long) parsedInput.get("neutral");
