@@ -139,6 +139,16 @@ a[title~="Repository"]::after {
 	content: "Negative Tweets";
 }
 
+a#learn-more {
+	color: #b6f1ff;
+	font-size: 1.15rem;
+	font-weight: 500;
+	display: block;
+	width: fit-content;
+	margin: 10px auto;
+	padding: 15px 0 0;
+}
+
 #fake-margin {
 	height: 8em;
 }
