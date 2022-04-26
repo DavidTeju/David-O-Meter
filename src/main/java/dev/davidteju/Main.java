@@ -74,7 +74,7 @@ public class Main {
 		
 		scan.forEachRemaining((line) -> {
 			try {
-				bw.write(line + "\n");
+				bw.write(line + "\n\n");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
