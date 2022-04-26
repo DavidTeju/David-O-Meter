@@ -12,7 +12,6 @@ txtFile.onreadystatechange = function () {
 		if (txtFile.status === 200) {
 			// Makes sure it's found the file.
 			let result = JSON.parse(txtFile.responseText);
-			console.log(result);
 			const resultArray = [result.positive, result.neutral, result.negative];
 
 			let sum = 0;
@@ -28,9 +27,12 @@ txtFile.onreadystatechange = function () {
 			for (let i = 0; i < bars.length; i++) {
 				const bar = bars[i];
 				bar.innerHTML =
-					Math.round((parseInt(resultArray[i]) * 100) / sum).toString() + "%";
+					roundToTwoDecimal((parseInt(resultArray[i]) * 100) / sum).toString() +
+					"%";
 
-				bar.style.flexGrow = Math.round(
+				bar.attributes.title = resultArray[i];
+
+				bar.style.flexGrow = roundToTwoDecimal(
 					(parseInt(resultArray[i]) * 100) / sum
 				).toString();
 
@@ -80,19 +82,23 @@ function hideOrShowNeutralBar() {
 	let neutralBarDisplay = document.getElementById("neutral");
 
 	let pos = document.getElementById("positive");
-	let posPercent = parseInt(pos.style.flexGrow);
+	let posPercent = parseFloat(pos.style.flexGrow);
 	let neg = document.getElementById("negative");
-	let negPercent = parseInt(neg.style.flexGrow);
+	let negPercent = parseFloat(neg.style.flexGrow);
 
 	let sum = posPercent + negPercent;
 
 	if (!isChecked) {
 		neutralBarDisplay.style.display = "none";
-		pos.innerHTML = Math.round((posPercent / sum) * 100) + "%";
-		neg.innerHTML = Math.round((negPercent / sum) * 100) + "%";
+		pos.innerHTML = roundToTwoDecimal((posPercent / sum) * 100) + "%";
+		neg.innerHTML = roundToTwoDecimal((negPercent / sum) * 100) + "%";
 	} else {
 		neutralBarDisplay.style.display = "initial";
 		pos.innerHTML = posPercent + "%";
 		neg.innerHTML = negPercent + "%";
 	}
+}
+
+function roundToTwoDecimal(toRound) {
+	return Math.round(toRound * 100) / 100;
 }
