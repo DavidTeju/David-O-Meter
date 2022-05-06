@@ -10,11 +10,12 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.Scanner;
+import java.util.function.Consumer;
 
 import static java.lang.Thread.sleep;
 
 public class Main {
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args){
 		final int MAX_PER_15_MIN = 300;
 		final long MILLIS_IN_15_MIN = 900000;
 		final long WAIT_TIME = MILLIS_IN_15_MIN / MAX_PER_15_MIN;
@@ -41,8 +42,12 @@ public class Main {
 			for (int i = 0; i < MAX_PER_15_MIN; i++) {
 				runBatch();
 				System.out.println(i + 1);
-				//noinspection BusyWait
-				sleep(WAIT_TIME);
+				try {
+					//noinspection BusyWait
+					sleep(WAIT_TIME);
+				} catch (InterruptedException e) {
+					throw new RuntimeException(e);
+				}
 			}
 			updateRemoteValues();
 			AzureAnalyticsValues.printValues();
@@ -56,32 +61,42 @@ public class Main {
 			var logStream = update.start().getInputStream();
 			var errors = update.start().getErrorStream();
 			
-			logGit(new SequenceInputStream(logStream, errors));
+			logGit(logStream, errors);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	private static void logGit(InputStream stream) throws IOException {
-		Scanner scan = new Scanner(stream).useDelimiter("\n");
+	
+	private static void logGit(InputStream infoStream, InputStream errorStream) throws IOException {
 		File f1 = new File("gitUpdates.log");
-		if (!f1.exists())
-			//noinspection ResultOfMethodCallIgnored
+		if (!f1.exists()) //noinspection ResultOfMethodCallIgnored
 			f1.createNewFile();
+		
 		BufferedWriter bw = new BufferedWriter(new FileWriter(f1.getName(), true));
 		var currentTime = new java.util.Date(System.currentTimeMillis());
-		bw.write(currentTime + "\n");
 		
-		scan.forEachRemaining((line) -> {
+		Consumer<String> writeAllLines = (line) -> {
 			try {
-				bw.write(line + "\n\n");
+				bw.write(line + "\n");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		});
+		};
+		
+		bw.write("\n" + currentTime + "\nINFO\n");
+		
+		Scanner scan = new Scanner(infoStream).useDelimiter("\n");
+		scan.forEachRemaining(writeAllLines);
+		scan.close();
+		
+		bw.write("ERROR\n");
+		
+		scan = new Scanner(errorStream).useDelimiter("\n");
+		scan.forEachRemaining(writeAllLines);
+		scan.close();
 		
 		bw.close();
-		scan.close();
 	}
 	
 	public static void runBatch() {

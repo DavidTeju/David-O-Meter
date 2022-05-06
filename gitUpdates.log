@@ -1,0 +1,651 @@
+.LOG
+Sun Apr 24 17:26:43 CDT 2022
+[main 456fb14] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 17:43:56 CDT 2022
+[main dc0498e] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 18:01:12 CDT 2022
+[main c2001e3] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 18:18:37 CDT 2022
+[main 8461ce7] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 18:35:55 CDT 2022
+[main 25753f9] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 18:53:01 CDT 2022
+[main 3303689] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 19:10:13 CDT 2022
+[main d5d739c] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 19:27:25 CDT 2022
+[main 086a6da] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 19:44:41 CDT 2022
+[main f2bc69d] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 20:02:00 CDT 2022
+[main 48b177d] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 21:46:53 CDT 2022
+[main 6131fa8] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Sun Apr 24 22:35:31 CDT 2022
+[main 708fd37] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Tue Apr 26 03:06:28 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 5ae68368eedc89998925d87b3e92aa686b8d4154 but expected 9070599d142b4aa560a40f0b9e4868cab0986273)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 03:32:24 CDT 2022
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+Everything up-to-date
+Tue Apr 26 04:42:59 CDT 2022
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   ceef831..7baf4a3  main -> main
+Tue Apr 26 05:00:16 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   7baf4a3..f463106  main -> main
+Tue Apr 26 05:18:30 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   f463106..d2031e4  main -> main
+Tue Apr 26 05:35:41 CDT 2022
+[main 1b4c3d1] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+fatal: cannot lock ref 'HEAD': is at 1b4c3d1a587d4e51b677f02b97ca433291e1a03f but expected d2031e4d5adc925f3e159c812bfd1d888739fe9d
+To https://github.com/DavidTeju/David-O-Meter.git
+   d2031e4..1b4c3d1  main -> main
+Tue Apr 26 05:53:01 CDT 2022
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   1b4c3d1..f90fdd3  main -> main
+Tue Apr 26 07:34:10 CDT 2022
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 7da75a1c5223c2708aff3cc1d67d8c4c450ee325 but expected f90fdd386c7acc12950c6cf54d8a1ce973c25489)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 07:51:21 CDT 2022
+To https://github.com/DavidTeju/David-O-Meter.git
+   7da75a1..0f7ae84  main -> main
+Tue Apr 26 08:08:31 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   0f7ae84..df41d4a  main -> main
+Tue Apr 26 08:25:48 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   df41d4a..795003c  main -> main
+Tue Apr 26 08:42:58 CDT 2022
+[main 2095e71] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/DavidTeju/David-O-Meter.git
+   795003c..2095e71  main -> main
+Tue Apr 26 09:00:12 CDT 2022
+[main edf41d4] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/DavidTeju/David-O-Meter.git
+   2095e71..edf41d4  main -> main
+Tue Apr 26 09:17:25 CDT 2022
+[main ec28ac3] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at ec28ac39b7d9f93d9db7092adee26d0917bdbfc9 but expected edf41d429bda285a28fef94acaced68c5969bd72)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 09:34:42 CDT 2022
+[main aa98412] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+fatal: cannot lock ref 'HEAD': is at aa984125c276188fd831e33d2e5cd12524100d18 but expected ec28ac39b7d9f93d9db7092adee26d0917bdbfc9
+To https://github.com/DavidTeju/David-O-Meter.git
+   ec28ac3..aa98412  main -> main
+Tue Apr 26 09:51:58 CDT 2022
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at a379092f8b94547381bcd660f38ab7f944fb7b53 but expected aa984125c276188fd831e33d2e5cd12524100d18)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 10:09:18 CDT 2022
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   sentimentValues.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 32b2e643ee687a7c45dbd033a7595a381c3addfa but expected a379092f8b94547381bcd660f38ab7f944fb7b53)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 10:26:55 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at ecb42172b4516f083565d15e1054120c295aad86 but expected 32b2e643ee687a7c45dbd033a7595a381c3addfa)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 10:44:12 CDT 2022
+[main 80d2616] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   ecb4217..80d2616  main -> main
+Tue Apr 26 11:04:47 CDT 2022
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 40f1457a5c8b0cc439b1ef84b63cefd842ba223c but expected 80d26168f173970fd1af8e9b3dc857a16ddfa424)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Tue Apr 26 11:22:11 CDT 2022
+To https://github.com/DavidTeju/David-O-Meter.git
+   40f1457..c039910  main -> main
+Tue Apr 26 11:40:51 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+   c039910..9d54686  main -> main
+Tue Apr 26 11:58:49 CDT 2022
+[main 3bb78d2] update values
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+fatal: cannot lock ref 'HEAD': is at 3bb78d20e418cd314d34c2d582aefb4472882445 but expected 9d546866520ec59280ff289f21cc7c81d2fa8076
+To https://github.com/DavidTeju/David-O-Meter.git
+   9d54686..3bb78d2  main -> main
+Tue Apr 26 12:20:21 CDT 2022
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.idea/
+	gitUpdates.log
+	target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 6909116e1bf54e7786b9e7f75a35da55de4df633 but expected 3bb78d20e418cd314d34c2d582aefb4472882445)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+Wed Apr 27 02:25:27 CDT 2022
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+Everything up-to-date
+
+Wed Apr 27 02:42:42 CDT 2022
+[main b964f73] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at b964f739bd1f5f029abdecdc186aaacf755e1dd4 but expected a6a688591f66608ae2700f4858b42f93383f564f)
+
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+
+Wed Apr 27 11:03:08 CDT 2022
+[main 9064143] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 9064143f9e92057b531214bc766e7753c7feedc6 but expected b964f739bd1f5f029abdecdc186aaacf755e1dd4)
+
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+
+Wed Apr 27 11:20:30 CDT 2022
+[main d773480] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+fatal: cannot lock ref 'HEAD': is at d7734806a99856aa4d6721a4096f1c6643db3170 but expected 9064143f9e92057b531214bc766e7753c7feedc6
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at d7734806a99856aa4d6721a4096f1c6643db3170 but expected 9064143f9e92057b531214bc766e7753c7feedc6)
+
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+
+Wed Apr 27 11:37:58 CDT 2022
+[main 2d69570] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 2d69570f230405b6b511ae6d26ba3ed772150317 but expected d7734806a99856aa4d6721a4096f1c6643db3170)
+
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+
+Wed Apr 27 11:55:23 CDT 2022
+On branch main
+
+Your branch is ahead of 'origin/main' by 1 commit.
+
+  (use "git push" to publish your local commits)
+
+
+
+Changes not staged for commit:
+
+  (use "git add <file>..." to update what will be committed)
+
+  (use "git restore <file>..." to discard changes in working directory)
+
+	modified:   update.zsh
+
+
+
+Untracked files:
+
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+	.idea/
+
+	gitUpdates.log
+
+	target/
+
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+   2d69570..c1cfecc  main -> main
+
+Wed Apr 27 12:15:07 CDT 2022
+[main ae68d2c] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+fatal: cannot lock ref 'HEAD': is at ae68d2ce5b7caaa4fadea1c370f757580c8e608c but expected c1cfeccfd2fd2dc056995f5b685c3f2b50947cdc
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+   c1cfecc..ae68d2c  main -> main
+
+Wed Apr 27 12:49:44 CDT 2022
+[main 626b850] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+fatal: cannot lock ref 'HEAD': is at 626b850cc9ed203e8266684e1b119e435a74fa8a but expected ae68d2ce5b7caaa4fadea1c370f757580c8e608c
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+   ae68d2c..626b850  main -> main
+
+Wed Apr 27 13:12:00 CDT 2022
+[main b12f2f8] update values
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+Aborting commit due to empty commit message.
+
+fatal: unable to access 'https://github.com/DavidTeju/David-O-Meter.git/': Could not resolve host: github.com
+
+Wed Apr 27 13:30:30 CDT 2022
+On branch main
+
+Your branch is ahead of 'origin/main' by 2 commits.
+
+  (use "git push" to publish your local commits)
+
+
+
+Changes not staged for commit:
+
+  (use "git add <file>..." to update what will be committed)
+
+  (use "git restore <file>..." to discard changes in working directory)
+
+	modified:   update.zsh
+
+
+
+Untracked files:
+
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+	.idea/
+
+	gitUpdates.log
+
+	src/main/java/dev/davidteju/PrintTester.java
+
+	target/
+
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+   626b850..264678f  main -> main
+
+Wed Apr 27 13:47:54 CDT 2022
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+
+
+Another git process seems to be running in this repository, e.g.
+
+an editor opened by 'git commit'. Please make sure all processes
+
+are terminated then try again. If it still fails, a git process
+
+may have crashed in this repository earlier:
+
+remove the file manually to continue.
+
+To https://github.com/DavidTeju/David-O-Meter.git
+
+   264678f..492181d  main -> main
+
+
+Fri May 06 01:48:05 CDT 2022
+INFO
+ERROR
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Fri May 06 03:10:48 CDT 2022
+INFO
+ERROR
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
