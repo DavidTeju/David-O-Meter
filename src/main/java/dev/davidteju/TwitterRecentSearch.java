@@ -43,7 +43,7 @@ public class TwitterRecentSearch {
 	}
 	
 	private static void logTweets(String toLog, boolean isError) throws IOException {
-		File f1 = new File("tweetsAnalysed.log");
+		File f1 = new File("logs/tweetsAnalysed.log");
 		if (!f1.exists()) //noinspection ResultOfMethodCallIgnored
 			f1.createNewFile();
 		

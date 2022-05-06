@@ -69,7 +69,7 @@ public class Main {
 	
 	
 	private static void logGit(InputStream infoStream, InputStream errorStream) throws IOException {
-		File f1 = new File("gitUpdates.log");
+		File f1 = new File("logs/gitUpdates.log");
 		if (!f1.exists()) //noinspection ResultOfMethodCallIgnored
 			f1.createNewFile();
 		
