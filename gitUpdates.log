@@ -649,3 +649,40 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Fri May 06 03:28:36 CDT 2022
+INFO
+[main 6929794] update values
+ 1 file changed, 215 insertions(+), 1 deletion(-)
+Already up to date.
+ERROR
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/Users/tejuo/Library/CloudStorage/OneDrive-Personal/Programming/IntelliJ/David-O-Meter/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+warning: fetch updated the current branch head.
+fast-forwarding your working tree from
+commit 535970730d6937babe59c15c5e668f195e980591.
+error: Your local changes to the following files would be overwritten by merge:
+	tweetsAnalysed.log
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: Cannot fast-forward your working tree.
+After making sure that you saved anything precious from
+$ git diff 535970730d6937babe59c15c5e668f195e980591
+output, run
+$ git reset --hard
+to recover.
+To https://github.com/DavidTeju/David-O-Meter.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 69297944f14240dc5dcffcf73581bd43e7156904 but expected 3111ca22da3d1e4156d3abc73759fdf4d42621e0)
+error: failed to push some refs to 'https://github.com/DavidTeju/David-O-Meter.git'
