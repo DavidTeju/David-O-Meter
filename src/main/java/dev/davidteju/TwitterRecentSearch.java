@@ -5,6 +5,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -23,14 +26,36 @@ public class TwitterRecentSearch {
 		return toJSONArray(response);
 	}
 	
-	static JSONArray toJSONArray(String response) throws ParseException {
+	static JSONArray toJSONArray(String response) throws ParseException, IOException {
 		JSONObject obj = (JSONObject) new JSONParser().parse(response);
+		JSONArray array = (JSONArray) obj.get("data");
+		
+		
 		//If there's a failed run
-		if (obj.get("error") != null) {
-			AzureAnalyticsValues.printToFile();
-			System.exit(1);
+		if (array == null || obj.get("error") != null) {
+			logTweets(obj.toString(), true);
+			return null;
 		}
+		
+		logTweets(array.toString(), false);
+		
 		return (JSONArray) obj.get("data");
+	}
+	
+	private static void logTweets(String toLog, boolean isError) throws IOException {
+		File f1 = new File("logs/tweetsAnalysed.log");
+		if (!f1.exists()) //noinspection ResultOfMethodCallIgnored
+			f1.createNewFile();
+		
+		BufferedWriter bw = new BufferedWriter(new FileWriter(f1.getName(), true));
+		var currentTime = new java.util.Date(System.currentTimeMillis());
+		
+		if (!isError)
+			bw.write("\n" + currentTime + "\nINFO  " + toLog);
+		else
+			bw.write("\n" + currentTime + "\nERROR  " + toLog);
+		
+		bw.close();
 	}
 	
 	static String search(String searchQuery, String bearerToken) throws IOException, InterruptedException {
