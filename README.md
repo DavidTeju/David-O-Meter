@@ -1,4 +1,5 @@
-# David-O-Meter
+# [David-O-Meter](https://davidteju.dev/projects/David-O-Meter/)
+> Project page moved. Click [here](https://davidteju.dev/projects/David-O-Meter/)
 
 ## What is this?
          This is a program/webpage that displays the ratio of positive to neutral to negative tweets that mention the word "David".  
